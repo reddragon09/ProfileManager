@@ -1,0 +1,12 @@
+{
+	"autoload":{
+		"classmap": [
+			"C:/xampp/php/ext/Zend/Db.php",
+			"C:/xampp/php/ext/Zend/Db/Table.php",
+			"C:/xampp/php/ext/Zend/Registry.php",
+			"C:/xampp/php/ext/Zend/Paginator.php",
+			"C:/xampp/php/ext/Zend/Paginator/Adapter/Array.php",
+			"C:/xampp/php/ext/Zend/Paginator/Adapter/DbTableSelect.php"
+		]
+	}
+}
