@@ -1,11 +1,13 @@
 <?php
-//require "vendor/autoload.php";
+require "vendor/autoload.php";
+/*
 include "Zend/Db.php";
 include "Zend/Db/Table.php";
 include "Zend/Registry.php";
 include "Zend/Paginator.php";
 include "Zend/Paginator/Adapter/Array.php";
 include "Zend/Paginator/Adapter/DbTableSelect.php";
+*/
 
 $dbAdapter = Zend_Db::factory('PDO_MYSQL', array(
     'host' => 'localhost',
@@ -126,5 +128,3 @@ for($page = 1; $page <= $profilePaginator->count();$page++){
      echo PHP_EOL;
     
 }
-
-var_dump($profilePaginator->count());
