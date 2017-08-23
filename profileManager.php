@@ -40,7 +40,7 @@ $profileSaveData = array(
     'address' => 'Ha Noi',
 );
 
-$profileTable->insert($profileSaveData);
+$lastProfileId = (int)$profileTable->insert($profileSaveData);
 
 //get profiles after insert profile
 $profiles = $profileTable->fetchAll();
@@ -53,15 +53,6 @@ foreach($profiles as $profile) {
     $address = $profile->address;
 
     echo $id.' '. $fullname.' '.$address.PHP_EOL;
-}
-
-//get last insert profile
-$statement = $profileTable->select()->order(array('id DESC'))->limit(1);
-$profiles = $profileTable->fetchAll($statement);
-
-$lastProfileId = 0;
-foreach ($profiles as $profile) {
-    $lastProfileId = (int)$profile->id;
 }
 
 if($lastProfileId <= 0){
